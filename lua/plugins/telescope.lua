@@ -9,7 +9,7 @@ return {
         local builtin = require("telescope.builtin")
         vim.keymap.set("n", "<leader>p", builtin.find_files, {})
         vim.keymap.set("n", "<leader>/", builtin.live_grep, {})
-        vim.keymap.set("n", "<leader><Tab>", "<Cmd>Telescope scope buffers<CR>", {})
+        vim.keymap.set("n", "<S-Tab>", "<Cmd>Telescope scope buffers<CR>", {})
 
     end,
 }
