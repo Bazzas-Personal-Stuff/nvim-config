@@ -79,7 +79,6 @@ return {
             vim.keymap.set("n", "gx", function() vim.diagnostic.open_float() end, opts)
             vim.keymap.set("n", "<leader><Enter>", function() vim.lsp.buf.code_action() end, opts)
             vim.keymap.set("n", "gu", function() vim.lsp.buf.references() end, opts)
-            vim.keymap.set("n", "<leader>mov", function() vim.lsp.buf.rename() end, opts)
             vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
         end)
 

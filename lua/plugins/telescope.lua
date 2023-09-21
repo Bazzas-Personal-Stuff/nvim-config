@@ -13,8 +13,8 @@ return {
         }
 
         local map = require("helpers.keys").map
-        map("n", "<leader>p", function() require("helpers.telescopePickers").prettyFilesPicker({picker = 'find_files'}) end, {})
-        map("n", "<leader>f", function() require("helpers.telescopePickers").prettyGrepPicker({picker = 'grep_string'}) end, {})
+        map("n", "<leader>p", function() require("helpers.telescopePickers").prettyFilesPicker({picker = 'find_files'}) end, "Open Project File")
+        map("n", "<leader>f", function() require("helpers.telescopePickers").prettyGrepPicker({picker = 'live_grep'}) end, "Search for string")
     end,
 }
 

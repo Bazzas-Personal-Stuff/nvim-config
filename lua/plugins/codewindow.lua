@@ -6,7 +6,9 @@ return {
             codewindow.setup({
                 auto_enable = true,
             })
-            codewindow.apply_default_keybinds()
+
+            local map = require("helpers.keys").map
+            map("n", "<leader>m", codewindow.toggle_minimap, "Toggle code minimap")
         end,
     }
 }
