@@ -2,14 +2,24 @@ return {
     'nvim-telescope/telescope.nvim', tag = '0.1.3',
     dependencies = {
         'nvim-lua/plenary.nvim',
-        'tiagovla/scope.nvim',
+        -- { 
+        --     'prochri/telescope-all-recent.nvim',
+        --     dependencies = { 'kkharji/sqlite.lua', },
+        -- },
     },
     config = function()
-        require("telescope").load_extension("scope")
-        local builtin = require("telescope.builtin")
-        vim.keymap.set("n", "<leader>p", builtin.find_files, {})
-        vim.keymap.set("n", "<leader>/", builtin.live_grep, {})
-        vim.keymap.set("n", "<S-Tab>", "<Cmd>Telescope scope buffers<CR>", {})
+        require("telescope").setup{
+            pickers = {
+                find_files = {
+                    theme = "dropdown",
+                },
+            },
+        }
+        -- require("telescope-all-recent").setup({})
+        map = require("helpers.keys").map
+
+        map("n", "<leader>p", function() require('telescope').builtin.find_files() end, "Find files in project")
+        -- map("n", "<S-Tab>", builtin.buffers, "Pick buffer")
 
     end,
 }
