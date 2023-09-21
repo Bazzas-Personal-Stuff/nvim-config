@@ -39,8 +39,7 @@ map("v", ">", ">gv")
 map("i", "<C-BS>", "<C-W>", "Delete word backwards")
 map("i", "<C-DEL>", "<C-o>de", "Delete word forwards")
 
--- map("n", "<C-Tab>", "<Cmd>bnext<CR>", "Cycle to next buffer")
--- map("n", "<C-S-Tab>", "<Cmd>bprev<CR>", "Cycle to previous buffer")
--- map("n", "<leader><Tab>", "<Cmd>BufferLinePick<CR>", "Buffer tab picking mode")
-map("n", "<leader>q", "<Cmd>bprevious <bar> bdelete #<CR>", "Close buffer")
-map("n", "<leader><S-q>", "<Cmd>bd<CR>", "Close buffer")
+-- map("n", "<leader>q", "<Cmd>bprevious <bar> bdelete #<CR>", "Close buffer")
+-- map("n", "<leader><S-q>", "<Cmd>bd<CR>", "Close buffer")
+--
+map("n", "<leader>/", "<Cmd>noh<CR>", "Clear search highlighting")
