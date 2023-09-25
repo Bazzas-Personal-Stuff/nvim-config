@@ -25,6 +25,7 @@ return {
                 map('n', '<leader>h',   api.tree.collapse_all,                  opts("Collapse all"))
                 map('n', '<BS>',        api.tree.change_root_to_parent,         opts("Up directory"))
                 map('n', '<CR>',        api.tree.change_root_to_node,           opts("Enter directory"))
+                map('n', 'b',           api.marks.toggle,                       opts("Toggle bookmark"))
                 -- Edit filesystem
                 map('n', 'n',           api.fs.create,                          opts("Create"))
                 map('n', 'r',           api.fs.rename,                          opts("Rename"))
@@ -41,7 +42,8 @@ return {
                 map('n', 'ypp',         api.fs.copy.relative_path,              opts("Copy relative path"))
                 map('n', 'yf',          api.fs.copy.filename,                   opts("Copy filename"))
                 -- Mouse
-                map('n', '<LeftMouse>', api.node.open.edit,                     opts("Open"))
+                map('n', '<2-LeftMouse>', api.node.open.edit,                     opts("Open"))
+                map('n', '<2-RightMouse>', api.marks.toggle,                      opts("Toggle bookmark"))
             end
 
             require("nvim-tree").setup({

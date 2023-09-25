@@ -5,19 +5,19 @@ return {
                 require("executor").setup({
                     use_split = false,
                     split = {
-                        width = 78,
+                        size = 120,
                     },
                     popup = {
-                        width = 78,
+                        width = 120,
                     }
                 })
 
                 local map = require("helpers.keys").map
-                map("n", "<leader>r", "<cmd>ExecutorRun<cr>", "Run executor")
-                map("n", "<leader><Tab>", "<cmd>ExecutorToggleDetail<cr>", "Run executor")
-                map("n", "<leader>cc", "<cmd>ExecutorSetCommand<cr>", "Set run command")
-                map("n", "<leader>cp", "<cmd>ExecutorSwapToPopup<cr>", "Set executor to Popup")
-                map("n", "<leader>cs", "<cmd>ExecutorSwapToSplit<cr>", "Set executor to Split")
+                map("n", "<leader>rr", "<cmd>ExecutorRun<cr>", "Run executor")
+                map("n", "<leader>r<Tab>", "<cmd>ExecutorToggleDetail<cr>", "Run executor")
+                map("n", "<leader>rc", "<cmd>ExecutorSetCommand<cr>", "Set run command")
+                map("n", "<leader>rp", "<cmd>ExecutorSwapToPopup<cr>", "Set executor to Popup")
+                map("n", "<leader>rs", "<cmd>ExecutorSwapToSplit<cr>", "Set executor to Split")
             end},
         }
     },

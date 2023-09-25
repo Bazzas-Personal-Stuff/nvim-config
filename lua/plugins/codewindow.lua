@@ -4,7 +4,7 @@ return {
         config = function()
             local codewindow = require("codewindow")
             codewindow.setup({
-                auto_enable = true,
+                auto_enable = false,
             })
 
             local map = require("helpers.keys").map

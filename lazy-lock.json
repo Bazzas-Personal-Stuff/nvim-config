@@ -2,6 +2,7 @@
   "Comment.nvim": { "branch": "master", "commit": "0236521ea582747b58869cb72f70ccfa967d2e89" },
   "JABS.nvim": { "branch": "main", "commit": "b6dbd1a3e1b8cef3d6ebfafe96c2230ca341b65f" },
   "LuaSnip": { "branch": "master", "commit": "8efa4e402a24df6a4713a2ec653147c49e8f73de" },
+  "auto-session": { "branch": "main", "commit": "3eb26b949e1b90798e84926848551046e2eb0721" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "44b16d11215dce86f253ce0c30949813c0a90765" },
   "codewindow.nvim": { "branch": "master", "commit": "11fb5520898d22a563fe6a124a61c0d2887f3d3f" },
   "executor.nvim": { "branch": "main", "commit": "f98049ceabb0ada223dfad2b40bf06df30331e0a" },

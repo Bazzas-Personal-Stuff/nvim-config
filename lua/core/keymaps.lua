@@ -9,6 +9,7 @@ map("v", "p", '"_dP', "Visual paste without yanking")
 map('n', 'gx', vim.diagnostic.open_float, "Show diagnostics under cursor")
 
 -- Navigate with shift-hjkl
+map("n", "<S-k>", "<Nop>", "Nop")
 map("n", "<S-h>", "<C-w><C-h>", "Navigate windows to the left")
 map("n", "<S-j>", "<C-w><C-j>", "Navigate windows down")
 map("n", "<S-k>", "<C-w><C-k>", "Navigate windows up")
@@ -20,9 +21,11 @@ map("n", "<M-j>", "<C-w><S-j>", "Move window down")
 map("n", "<M-k>", "<C-w><S-k>", "Move window up")
 map("n", "<M-l>", "<C-w><S-l>", "Move window to the right")
 
--- Split windows with ctrl-jl
-map("n", "<C-l>", "<C-w>v<C-w><C-l>", "Split window to the right and navigate")
-map("n", "<C-j>", "<C-w>s<C-w><C-j>", "Split window downwards and navigate")
+-- Split windows with ctrl-hjkl
+map("n", "<C-h>", "<C-w>v", "Split window to the left")
+map("n", "<C-j>", "<C-w>s<C-w><C-j>", "Split window downwards")
+map("n", "<C-k>", "<C-w>s", "Split window upward")
+map("n", "<C-l>", "<C-w>v<C-w><C-l>", "Split window to the right")
 
 
 -- Easy big jumps

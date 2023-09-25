@@ -22,14 +22,14 @@ return {
                     terminal_symbol = "" -- Filetype icon for a terminal split. Default 
                 },
                 keymap = {
-                    close = "<leader>q",
-                    h_split = "<C-j>",
-                    v_split = "<C-l>",
+                    close = "q",
+                    h_split = "<leader>j",
+                    v_split = "<leader>l",
                 }
             })
 
             local map = require("helpers.keys").map
-            map("n", "<Tab>", "<Cmd>JABSOpen<CR>", "Pick buffer")
+            map("n", "<leader><Tab>", "<Cmd>JABSOpen<CR>", "Pick buffer")
         end
     }
 }
