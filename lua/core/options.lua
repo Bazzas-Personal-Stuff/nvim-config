@@ -17,5 +17,13 @@ end
 vim.g.nord_italic   = false
 vim.g.nord_bold     = false
 
+vim.o.scrolloff = 7
+vim.o.sidescrolloff = 7
+
+vim.o.shell = "nu"
+
+-- vim.g.lsp_zero_ui_float_border = 'double'
+
+
 local colorscheme = require("helpers.colorscheme")
 vim.cmd.colorscheme(colorscheme)

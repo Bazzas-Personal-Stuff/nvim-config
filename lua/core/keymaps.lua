@@ -46,3 +46,6 @@ map("i", "<C-DEL>", "<C-o>de", "Delete word forwards")
 -- map("n", "<leader><S-q>", "<Cmd>bd<CR>", "Close buffer")
 --
 map("n", "<leader>/", "<Cmd>noh<CR>", "Clear search highlighting")
+
+map("n", "<leader>t", "<Cmd>terminal<CR>", "Open terminal")
+map("t", "<C-\\><C-\\>", "<C-\\><C-n>", "Exit terminal mode")
