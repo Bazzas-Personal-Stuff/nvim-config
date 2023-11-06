@@ -17,7 +17,7 @@ return {
 
                 -- Help
                 map('n', '?',           api.tree.toggle_help,                   opts("Help"))
-                map('n', 'q',           api.tree.toggle_help,                   opts("Close tree window"))
+                map('n', 'q',           api.tree.close,                         opts("Close tree window"))
                 -- Tree navigation
                 map('n', 'l',           api.node.open.edit,                     opts("Open"))
                 map('n', '<leader>l',   api.tree.expand_all,                    opts("Expand all"))
@@ -30,9 +30,9 @@ return {
                 map('n', 'n',           api.fs.create,                          opts("Create"))
                 map('n', 'r',           api.fs.rename,                          opts("Rename"))
                 map('n', 'yy',          api.fs.copy.node,                       opts("Copy"))
-                map('n', 'x',           api.fs.cut,                             opts("Cut"))
+                -- map('n', 'x',           api.fs.cut,                             opts("Cut"))
                 map('n', 'p',           api.fs.paste,                           opts("Paste"))
-                map('n', '<DEL>',       api.fs.remove,                          opts("Delete"))
+                map('n', 'x',           api.fs.remove,                          opts("Delete"))
                 map('n', '<S-DEL>',     api.fs.trash,                           opts("Trash"))
                 -- Filter
                 map('n', 'D',           api.tree.toggle_hidden_filter,          opts("Toggle filter: dotfiles"))
@@ -85,7 +85,9 @@ return {
                 },
             })
             local map = require("helpers.keys").map
+            local api = require("nvim-tree.api")
             map("n", "<leader>e", "<Cmd>NvimTreeFocus<CR>", "Focus file explorer")
+            map("n", "<M-e>", api.tree.close, "Close file explorer")
         end,
     }
 }
