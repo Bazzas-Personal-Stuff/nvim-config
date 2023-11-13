@@ -42,10 +42,10 @@ map("v", ">", ">gv")
 map("i", "<C-BS>", "<C-W>", "Delete word backwards")
 map("i", "<C-DEL>", "<C-o>de", "Delete word forwards")
 
--- map("n", "<leader>q", "<Cmd>bprevious <bar> bdelete #<CR>", "Close buffer")
--- map("n", "<leader><S-q>", "<Cmd>bd<CR>", "Close buffer")
---
+map("n", "<leader>q", "<Cmd>bprevious <bar> bdelete #<CR>", "Close buffer")
+map("n", "<leader><S-q>", "<Cmd>bd<CR>", "Close buffer")
+
 map("n", "<leader>/", "<Cmd>noh<CR>", "Clear search highlighting")
 
 map("n", "<leader>t", "<Cmd>terminal<CR>", "Open terminal")
-map("t", "<C-\\><C-\\>", "<C-\\><C-n>", "Exit terminal mode")
+map("t", "<Esc><Esc>", "<C-\\><C-n>", "Exit terminal mode")
