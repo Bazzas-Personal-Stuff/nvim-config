@@ -21,6 +21,9 @@ vim.o.scrolloff = 7
 vim.o.sidescrolloff = 7
 
 vim.o.shell = "nu"
+vim.o.shellcmdflag = "-c"
+vim.o.shellquote = ""
+vim.o.shellxquote = ""
 
 -- vim.g.lsp_zero_ui_float_border = 'double'
 
