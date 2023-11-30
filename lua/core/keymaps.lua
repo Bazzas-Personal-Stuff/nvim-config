@@ -6,7 +6,11 @@ map("i", "jk", "<esc>", "Fast exit from insert mode")
 
 map("v", "p", '"_dP', "Visual paste without yanking")
 
-map('n', 'gx', vim.diagnostic.open_float, "Show diagnostics under cursor")
+-- ----- Defined in LSP on buffer attach
+-- map('n', 'gx', vim.diagnostic.open_float, "Show diagnostics under cursor")
+-- map('n', 'gj', vim.diagnostic.goto_next, "Go to next diagnostic")
+-- map('n', 'gk', vim.diagnostic.goto_prev, "Go to previous diagnostic")
+
 
 -- Navigate with shift-hjkl
 map("n", "<S-k>", "<Nop>", "Nop")
@@ -27,7 +31,6 @@ map("n", "<C-j>", "<C-w>s<C-w><C-j>", "Split window downwards")
 map("n", "<C-k>", "<C-w>s", "Split window upward")
 map("n", "<C-l>", "<C-w>v<C-w><C-l>", "Split window to the right")
 
-
 -- Easy big jumps
 map("n", "<S-Left>", "^", "Go to beginning of line")
 map("n", "<S-Down>", "}", "Go to lower bracket")
@@ -41,9 +44,11 @@ map("v", ">", ">gv")
 -- Full word deletion
 map("i", "<C-BS>", "<C-W>", "Delete word backwards")
 map("i", "<C-DEL>", "<C-o>de", "Delete word forwards")
+map("n", "<C-BS>", "<C-W>", "Delete word backwards")
+map("n", "<C-DEL>", "<C-o>de", "Delete word forwards")
 
 map("n", "<leader>q", "<Cmd>bprevious <bar> bdelete #<CR>", "Close buffer")
-map("n", "<leader><S-q>", "<Cmd>bd<CR>", "Close buffer")
+map("n", "<leader>Q", "<Cmd>bd<CR>", "Close split and buffer")
 
 map("n", "<leader>/", "<Cmd>noh<CR>", "Clear search highlighting")
 
